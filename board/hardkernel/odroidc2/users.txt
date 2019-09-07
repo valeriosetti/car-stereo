@@ -1,0 +1,1 @@
+odroid -1 odroid -1 odroid /home/odroid /bin/bash odroid odroid-default-user
