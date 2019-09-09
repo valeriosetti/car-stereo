@@ -336,7 +336,7 @@ add_one_user() {
            "${username}" "${uid}" "${_gid}"     \
            "${comment}" "${_home}" "${_shell}"  \
            >>"${PASSWD}"
-    printf "%s:%s:::::::\n"      \
+    printf "%s:%s:10933:0:999999:7:::\n"      \
            "${username}" "${_passwd}"   \
            >>"${SHADOW}"
 

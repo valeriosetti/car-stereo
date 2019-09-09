@@ -1,1 +1,2 @@
-odroid -1 odroid -1 odroid /home/odroid /bin/bash odroid odroid-default-user
+#username uid group gid passwd home shell groups comment
+odroid -1 odroid -1 $1$.nLtRBIW$JAF5rkKZ3dabFr5V/.GBS/ /home/odroid /bin/bash odroid odroid-default-user
