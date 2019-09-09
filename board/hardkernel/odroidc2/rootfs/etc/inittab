@@ -29,8 +29,8 @@ null::sysinit:/sbin/route add -net 127.0.0.0 netmask 255.0.0.0 lo
 
 # Put a getty on the serial port
 #ttyS0::respawn:/sbin/getty -L ttyS0 115200 vt100 # UNSUPPORT GENERIC_SERIAL
-ttyS0::respawn:-/bin/sh  # AMLOGIC_GENERAL_SERIAL
-tty0::respawn:-/bin/sh # Framebuffer console
+ttyS0::respawn:/bin/bash  # AMLOGIC_GENERAL_SERIAL
+tty0::respawn:/bin/bash # Framebuffer console
 
 # Logging junk
 null::sysinit:/bin/touch /var/log/messages
