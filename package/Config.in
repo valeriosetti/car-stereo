@@ -1729,4 +1729,9 @@ menu "Trustzone"
     source "package/aml_bdk/Config.in"
 endmenu
 
+menu "Misc"
+    source "package/hello/Config.in"
+    source "package/dabon-cli/Config.in"
+endmenu
+
 endmenu
