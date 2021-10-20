@@ -1,0 +1,37 @@
+Index: linux-odroidc2-3.14.y/arch/arm64/boot/dts/custom.dtsi
+===================================================================
+--- /dev/null
++++ linux-odroidc2-3.14.y/arch/arm64/boot/dts/custom.dtsi
+@@ -0,0 +1,9 @@
++&i2c_a {
++	status = "okay";
++
++	sgtl5000: sgtl5000@0a	{
++		status = "okay";
++		compatible = "fsl,sgtl5000";
++		reg = <0x0a>;
++	};
++};
+Index: linux-odroidc2-3.14.y/arch/arm64/boot/dts/meson64_odroidc2.dts
+===================================================================
+--- linux-odroidc2-3.14.y.orig/arch/arm64/boot/dts/meson64_odroidc2.dts
++++ linux-odroidc2-3.14.y/arch/arm64/boot/dts/meson64_odroidc2.dts
+@@ -920,3 +920,5 @@
+ &amlwatchdog {
+ 	status = "okay";
+ };
++
++#include "custom.dtsi"
+Index: linux-odroidc2-3.14.y/arch/arm64/boot/dts/meson64_odroidc2.dts
+===================================================================
+--- linux-odroidc2-3.14.y.orig/arch/arm64/boot/dts/meson64_odroidc2.dts
++++ linux-odroidc2-3.14.y/arch/arm64/boot/dts/meson64_odroidc2.dts
+@@ -861,7 +861,7 @@
+ 	/* Hardkernel I2C 3.5" Touchscreen */
+ 	/* drivers/input/sx865x.c */
+ 	sx865x: sx865x@49	{
+-		status = "okay";
++		status = "disabled";
+ 		compatible = "semtech,sx8650";
+ 		reg = <0x49>;
+ 		#clock-cells = <0>;
